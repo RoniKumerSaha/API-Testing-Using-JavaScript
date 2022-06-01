@@ -1,6 +1,9 @@
 pipeline {
-    agent { dockerfile true }
+    
     stages {
+        stage('Clone repo'){
+            checkout scm
+        }
         stage('Build Image') {
             steps {
                 sh 'export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH'
