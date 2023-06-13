@@ -4,7 +4,7 @@
 name: Testing
 
 on:
-  commit_comment:
+  pull_request:
 
 jobs:
   build:
